@@ -1,1 +1,1 @@
-[{"id":0,"tache":"Reprendre le train","do":false},{"id":1,"tache":"Test","do":false},{"id":2,"tache":"sdfsdf","do":false},{"id":3,"tache":"Offrir un cadeau","do":false},{"id":4,"tache":"Jouer","do":false},{"id":5,"tache":"Faire \u00e0 manger","do":true}]
+[{"id":0,"tache":"Reprendre le train","do":true},{"id":1,"tache":"Test","do":false},{"id":2,"tache":"sdfsdf","do":false},{"id":3,"tache":"Offrir un cadeau","do":false},{"id":4,"tache":"Jouer","do":false},{"id":5,"tache":"Faire \u00e0 manger","do":true}]

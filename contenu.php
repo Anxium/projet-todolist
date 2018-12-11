@@ -4,28 +4,26 @@ $FILE = 'assets/json/todo.json';
 $currentData = file_get_contents($FILE);
 $array = json_decode($currentData);
 
-var_dump($array);
+$false = $true = "";
 
-// $false = $true = "";
+foreach($array as $value) {
+    if($value->do == false) {
+        $false .= '<input type="checkbox" name="'.$value->id.'/> <br/> <label for="'.$value->id.'">'.$value->tache.'</label> <br/>';
+    } else {
+        $true .= $value->tache . "<br/>";
+    }
+};
 
-// foreach($array as $key => $value) {
-//     if($array->do == false) {
-//         $false .= $value;
-//     } else {
-//         $true .= $value;
-//     }
-// }
+echo '
+<div class="aFaire">
+    <form>'
+        . $false .
+        '<input type="submit" value="Enregistrer" id="regsiter">
+    </form>
+</div>
 
-// echo '
-// <div class="aFaire">
-//     <form>'
-//         . $false .
-//         '<input type="submit" value="Enregistrer" id="regsiter">
-//     </form>
-// </div>
-
-// <div class="archive">
-//     <form>'
-//         . $true .
-//     '</form>
-// </div>';
+<div class="archive">
+    <form>'
+        . $true .
+    '</form>
+</div>';
