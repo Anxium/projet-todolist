@@ -1,8 +1,8 @@
 <?php
 
-$dataErr = $message = "";
-
 $FILE = 'assets/json/todo.json';
+$current = file_get_contents($FILE);
+$temp = json_decode($current, true);
 
 if (isset($_POST['data'])) {
 
@@ -10,17 +10,20 @@ if (isset($_POST['data'])) {
      
     if(empty($result)) {
 
-        $dataErr = "La case ne peut pas être vide!";
+        echo "La case ne peut pas être vide!";
 
     } else {
 
         $current = file_get_contents($FILE);
-        $tempArray = json_decode($current, true);
-        array_push($tempArray["todo"], $result);
-        $jsonData = json_encode($tempArray);
+        $temp = json_decode($current, true);
+
+        $myObj->id = sizeof($temp);
+        $myObj->tache = $result;
+        $myObj->do = false;
+        array_push($temp, $myObj);
+
+        $jsonData = json_encode($temp);
         file_put_contents($FILE, $jsonData);
-    
-        $message = 'Donnée ajoutée avec succès';
         
     }
 
