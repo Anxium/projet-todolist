@@ -15,10 +15,12 @@ if (isset($_POST['data'])) {
         $current = file_get_contents($FILE);
         $temp = json_decode($current, true);
 
-        $myObj->id = (sizeof($temp))+1;
-        $myObj->tache = $result;
-        $myObj->do = false;
-        array_push($temp, $myObj);
+        $temp[] = ["id" => (sizeof($temp))+1, "tache" => $result, "do" => false];
+        
+        // $myObj->id = (sizeof($temp))+1;
+        // $myObj->tache = $result;
+        // $myObj->do = false;
+        // array_push($temp, $myObj);
 
         $jsonData = json_encode($temp);
         file_put_contents($FILE, $jsonData);

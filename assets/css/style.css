@@ -16,6 +16,7 @@ body {
 
 #todo {
     border: 2px solid black;
+    border-radius: 10px 10px 0 0;
     height: 600px;
     width: 400px;
     overflow: scroll;
@@ -29,6 +30,7 @@ body {
 .action {
     border: 2px solid black;
     border-top: 0px;
+    border-radius: 0 0 10px 10px;
     text-align: center;
     padding: 0px 20px 20px 20px;
     width: 400px;
