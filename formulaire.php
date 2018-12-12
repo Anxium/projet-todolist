@@ -1,8 +1,6 @@
 <?php
 
 $FILE = 'assets/json/todo.json';
-$current = file_get_contents($FILE);
-$temp = json_decode($current, true);
 
 if (isset($_POST['data'])) {
 
@@ -17,7 +15,7 @@ if (isset($_POST['data'])) {
         $current = file_get_contents($FILE);
         $temp = json_decode($current, true);
 
-        $myObj->id = sizeof($temp);
+        $myObj->id = (sizeof($temp))+1;
         $myObj->tache = $result;
         $myObj->do = false;
         array_push($temp, $myObj);
