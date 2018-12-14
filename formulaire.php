@@ -16,13 +16,8 @@ if (isset($_POST['data'])) {
         $temp = json_decode($current, true);
 
         $temp[] = ["id" => (sizeof($temp))+1, "tache" => $result, "do" => false];
-        
-        // $myObj->id = (sizeof($temp))+1;
-        // $myObj->tache = $result;
-        // $myObj->do = false;
-        // array_push($temp, $myObj);
 
-        $jsonData = json_encode($temp);
+        $jsonData = json_encode($temp, JSON_UNESCAPED_UNICODE);
         file_put_contents($FILE, $jsonData);
         
     }

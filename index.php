@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div id="todo">
+    <div class="todo" id="todo">
     </div>
 
     <div class="action">

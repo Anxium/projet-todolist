@@ -10,11 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     font-family: sans-serif;
 }
 
-#todo {
+.todo {
+    margin-top: 20px;
     border: 2px solid black;
     border-radius: 10px 10px 0 0;
     height: 600px;
@@ -28,6 +29,7 @@ body {
 }
 
 .action {
+    margin-bottom: 20px;
     border: 2px solid black;
     border-top: 0px;
     border-radius: 0 0 10px 10px;
@@ -38,4 +40,14 @@ body {
 
 .archives {
     text-decoration: line-through;
+}
+
+@media screen and (max-width: 400px) {
+    .todo {
+        width: 300px;
+    }
+
+    .action {
+        width: 300px;
+    }
 }

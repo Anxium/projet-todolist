@@ -13,7 +13,7 @@ foreach($array as $value) {
             if($val == $value->id) {
                 $value->do = true;
         
-                $jsonData = json_encode($array);
+                $jsonData = json_encode($array, JSON_UNESCAPED_UNICODE);
                 file_put_contents($FILE, $jsonData);
             }
         }

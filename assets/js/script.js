@@ -17,6 +17,19 @@ let contenu = () => {
 
                 contenu(); // Actualise l'affichage au clic du register
             });
+
+            $('#register').hide();
+
+            $('input[type="checkbox"]').click(function(){ // Fait apparaitre/disparaitre le bouton register si un input"checkbox" est coché/décoché
+                let checked = new Array();
+                $('input[type="checkbox"]:checked').each( value => checked.push($("input:checked").get(value)));
+
+                if(checked.length >= 1) {
+                    $('#register').show();
+                } else {
+                    $('#register').hide();
+                }
+            })
         },
 
         'text'
