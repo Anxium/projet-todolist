@@ -12,6 +12,16 @@ body {
     align-items: center;
     flex-flow: column nowrap;
     font-family: sans-serif;
+    background-image: url(../img/background.png);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #c2c9d2;
 }
 
 .todo {
@@ -22,6 +32,7 @@ body {
     width: 400px;
     overflow: scroll;
     text-align: center;
+    background: #fff;
 }
 
 .archive {
@@ -36,6 +47,7 @@ body {
     text-align: center;
     padding: 0px 20px 20px 20px;
     width: 400px;
+    background: #fff;
 }
 
 .archives {
