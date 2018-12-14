@@ -48,7 +48,7 @@ $('document').ready(function() {
                 data : $('#tache').val() // Envoi en POST la valeur du champ "tache" à formulaire.php 
             },
             
-            data => console.log('Votre tâche a été ajoutée'),
+            data => alert(data),
             
             'text'
         );

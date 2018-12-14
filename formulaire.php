@@ -8,7 +8,7 @@ if (isset($_POST['data'])) {
      
     if(empty($result)) {
 
-        echo "La case ne peut pas être vide!";
+        echo "Le champ ne peut pas être vide!";
 
     } else {
 
@@ -20,6 +20,7 @@ if (isset($_POST['data'])) {
         $jsonData = json_encode($temp, JSON_UNESCAPED_UNICODE);
         file_put_contents($FILE, $jsonData);
         
+        echo "Votre tâche a été ajoutée";
     }
 
 }
