@@ -48,12 +48,14 @@ $('document').ready(function() {
                 data : $('#tache').val() // Envoi en POST la valeur du champ "tache" à formulaire.php 
             },
             
-            data => alert(data),
+            function(data) {
+                alert(data)
+
+                contenu() // Rafraichit le contenu une fois la données envoyée
+            },
             
             'text'
         );
-            
-        contenu(); // Sert à actualiser l'affichage (Voir fonction plus haut pour + de détails)
 
         $('#tache').val(''); // Nettoie le champ
     });
